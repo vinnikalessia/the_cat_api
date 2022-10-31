@@ -484,7 +484,7 @@ input::placeholder {
     justify-content: space-between;
 }
 
-.c-cat-data__characteristics{
+.c-cat-data__characteristic{
     background-color: aquamarine;
 }
 
@@ -497,6 +497,13 @@ input::placeholder {
     background-color: yellow;
 }
 
+.c-characteristic{
+    padding: 14px;
+}
+
+.c-toggle-button{
+    
+}
 /*------------------------------------*\
 #UTILITIES
 \*------------------------------------*/
