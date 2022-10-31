@@ -512,7 +512,7 @@ input::placeholder {
     height: 32px;
     width: 120px;
     border-radius: 50px;
-    background-color: #999;
+    background-color: var(--color-dark-button);
     border: none;
 }
 /*------------------------------------*\
