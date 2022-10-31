@@ -7,14 +7,18 @@
 \*------------------------------------*/
 
 :root {
-    --color-light: hsla(208, 100%, 90%, 1);
-    --color-dark: hsla(208, 70%, 20%, 1);
+    --color-background:  #F9F5F1;
 
-    --color-front: var(--color-dark);
-    --color-back: var(--color-light);
+    --color-dark-button: #B7AD91;
+    --color-light-button: #D8D8D8;
 
-    --color-night-front: #CCE7FF;
-    --color-night-back: #0F3557;
+    --color-level-1: #F9A990;
+    --color-level-2: #F9C890;
+    --color-level-3: #F9DD90;
+    --color-level-4: #F9E890;
+    --color-level-5: #D6F990;
+
+    --color-text: #000000;
 }
 
 
@@ -35,8 +39,8 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    color: black; 
-    background-color: #F9F5F1;
+    color: var(--color-text);
+    background-color: var(--color-background);
 }
 
 
