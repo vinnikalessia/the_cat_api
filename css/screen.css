@@ -444,7 +444,7 @@ input::placeholder {
     -moz-osx-font-smoothing: inherit;
 
     /* Corrects inability to style clickable `input` types in iOS */
-    -webkit-appearance: none;
+    /* -webkit-appearance: none; */
 }
 
 /**************************************************************************************************
@@ -473,6 +473,9 @@ input::placeholder {
 }
 
 .c-cat-data__title{
+    display: block;
+    justify-content: center;
+    align-items: center;
     background-color: #F9A990;
     text-align: center;
 }
@@ -502,7 +505,15 @@ input::placeholder {
 }
 
 .c-toggle-button{
-    
+    background-color: #000;
+}
+
+.c-random-cat{
+    height: 32px;
+    width: 120px;
+    border-radius: 50px;
+    background-color: #999;
+    border: none;
 }
 /*------------------------------------*\
 #UTILITIES
