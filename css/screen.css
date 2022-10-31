@@ -493,6 +493,10 @@ input::placeholder {
 
 .c-cat-data__img{
     background-color: #D6F990;
+    /*max width en height zouden moeten helpen*/
+    padding: 8px;
+    max-width: 100%;
+    height: auto;
 }
 
 .c-cat-data__level{
@@ -504,8 +508,31 @@ input::placeholder {
     padding: 14px;
 }
 
+.c-custom-toggle{
+    display: flex;
+}
+
 .c-toggle-button{
-    background-color: #000;
+    background-color: var(--color-light-button);
+    height: 24px;
+    width: 208px;
+    margin-right: var(--global-whitespace-md);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 3px;
+}
+
+.c-toggle-button::before{
+    
+    height: 22px;
+    width: 22px;
+    background-color: white;
+    box-shadow: 0 0 2px 2px hwb(240 60% 39% / 0.173);
+    border-radius: 50%;
+    display: contents;
+    content: "";
+    transition: .2s;
 }
 
 .c-random-cat{
