@@ -7,6 +7,7 @@
 \*------------------------------------*/
 
 :root {
+    /*Colors*/
     --color-background:  #F9F5F1;
 
     --color-dark-button: #B7AD91;
@@ -19,6 +20,26 @@
     --color-level-5: #D6F990;
 
     --color-text: #000000;
+
+    --global-transitionTiming-alpha: .1s ease-out;
+
+    /* Baseline settings */
+    --global-baseline: 8px;
+    --global-whitespace: calc(var(--global-baseline) * 3);
+    /* = 24px */
+
+    --global-whitespace-xs: calc(var(--global-baseline) / 2);
+    /* = 4px */
+    --global-whitespace-sm: calc(var(--global-baseline) * 1);
+    /*  = 8px */
+    --global-whitespace-md: calc(var(--global-baseline) * 2);
+    /*  = 16px */
+    --global-whitespace-lg: calc(var(--global-baseline) * 4);
+    /*  = 32px */
+    --global-whitespace-xl: calc(var(--global-whitespace) * 2);
+    /*  = 48px */
+    --global-whitespace-xxl: calc(var(--global-whitespace) * 3);
+    /*  = 72px */
 }
 
 
@@ -50,15 +71,9 @@ html {
     box-sizing: inherit;
 }
 
-/*
-* Remove text-shadow in selection highlight:
-* https://twitter.com/miketaylr/status/12228805301
-*
-* Customize the background color to match your design.
-*/
 
 ::selection {
-    background: var(--global-color-alpha);
+    background: var(--color-dark-button);
     color: white;
     text-shadow: none;
 }
@@ -166,7 +181,7 @@ hr {
 a,
 a:visited {
     transition: all var(--global-transitionTiming-alpha);
-    color: var(--global-color-alpha);
+    color: hotpink;
     outline-color: var(--global-link-BoxShadowColor);
     outline-width: medium;
     outline-offset: 2px;
@@ -174,11 +189,11 @@ a:visited {
 
 a:hover,
 a:focus {
-    color: var(--global-color-alpha-light);
+    color: yellow;
 }
 
 a:active {
-    color: var(--global-color-alpha-dark);
+    color: cadetblue;
 }
 
 label,
@@ -187,7 +202,7 @@ input {
 }
 
 input::placeholder {
-    color: var(--global-color-neutral-x-light);
+    color: purple;
 }
 
 /*------------------------------------*\
@@ -637,7 +652,7 @@ input::placeholder {
 }
 
 .c-custom-option__fake-input--checkbox .c-custom-option__symbol{
-    transition: 0.2s ease rotate(35deg);
+    /* transition: 0.2s ease rotate(35deg); */
     width: 10px;
     height: 10px;
     fill: black;
@@ -773,7 +788,7 @@ Component: toggle
     border-radius: 32px;
     border: var(--global-borderWidth) solid #caccd4;
     transition: border var(--global-transition-timing-alpha);
-    box-shadow: grey;
+    /* box-shadow: grey; */
     display: flex;
     align-items: center;
     justify-content: start;
