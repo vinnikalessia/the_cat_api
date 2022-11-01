@@ -205,6 +205,11 @@ input::placeholder {
     color: purple;
 }
 
+button{
+    font-weight: 300;
+    font: inherit;
+}
+
 /*------------------------------------*\
 #OBJECTS
 \*------------------------------------*/
@@ -540,17 +545,22 @@ input::placeholder {
     border-radius: 50px;
     background-color: var(--color-dark-button);
     border: none;
+    font: 'Courier New', Courier, monospace;
 }
 
 .c-random-cat:hover{
     background-color: #a3997e;
-    border: #F9A990 solid 1px;
 }
 
 .c-random-cat:focus-visible{
     border: 2px solid #7f775f;
     outline: none;
 }
+
+.c-random-cat:active{
+    background-color: #7f775f;
+}
+
 /*------------------------------------*\
 #UTILITIES
 \*------------------------------------*/
