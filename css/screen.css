@@ -524,7 +524,6 @@ input::placeholder {
 }
 
 .c-toggle-button::before{
-    
     height: 22px;
     width: 22px;
     background-color: white;
@@ -541,6 +540,16 @@ input::placeholder {
     border-radius: 50px;
     background-color: var(--color-dark-button);
     border: none;
+}
+
+.c-random-cat:hover{
+    background-color: #a3997e;
+    border: #F9A990 solid 1px;
+}
+
+.c-random-cat:focus-visible{
+    border: 2px solid #7f775f;
+    outline: none;
 }
 /*------------------------------------*\
 #UTILITIES
