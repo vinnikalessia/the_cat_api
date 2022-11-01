@@ -511,6 +511,7 @@ button{
 
 .c-characteristic{
     padding: 14px;
+    width: 200px;
 }
 
 .c-custom-toggle{
@@ -559,6 +560,21 @@ button{
 
 .c-random-cat:active{
     background-color: #7f775f;
+}
+
+.c-level{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 24px; */
+    margin-left: auto;
+}
+
+.c-level__bar{
+    width: 250px;
+    height: 24px;
+    background-color: orangered;
+    content: "";
 }
 
 /*------------------------------------*\
