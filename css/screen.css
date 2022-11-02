@@ -226,11 +226,6 @@ button{
     padding: var(--global-whitespace) var(--global-whitespace) 0;
 }
 
-.o-row--login {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-}
 
 /* size modifiers */
 
@@ -475,12 +470,13 @@ button{
 
 .c-cat-data{
     background-color: hotpink;
-}
-
-.c-cat-data__title{
     display: block;
     justify-content: center;
     align-items: center;
+}
+
+
+.c-cat-data__title{
     background-color: #F9A990;
     text-align: center;
 }
@@ -489,7 +485,6 @@ button{
     background-color: #F9E890;
     padding: 24px;
     display: flex;
-    justify-content: space-between;
 }
 
 .c-cat-data__characteristic{
@@ -498,7 +493,6 @@ button{
 
 .c-cat-data__img{
     background-color: #D6F990;
-    /*max width en height zouden moeten helpen*/
     padding: 8px;
     max-width: 100%;
     height: auto;
@@ -511,7 +505,7 @@ button{
 
 .c-characteristic{
     padding: 14px;
-    width: 200px;
+    width: 250px;
 }
 
 .c-custom-toggle{
@@ -565,9 +559,6 @@ button{
 .c-level{
     display: flex;
     align-items: center;
-    justify-content: center;
-    /* padding: 24px; */
-    margin-left: auto;
 }
 
 .c-level__bar{
@@ -575,6 +566,54 @@ button{
     height: 24px;
     background-color: orangered;
     content: "";
+}
+
+.c-grid-container__1{
+    display: grid;
+    column-gap: 12px;
+    grid-template-columns: auto auto;
+}
+
+.c-grid-item__1{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.c-grid-item__2{
+    grid-column-start: 3;
+    grid-column-end: 3;
+}
+
+.c-grid-container__2{
+    display: grid;
+    column-gap: 12px;
+    grid-template-rows: auto auto;
+    justify-content: center;
+}
+
+.c-grid-item__c{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.c-grid-item__l{
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+
+/*
+    @media
+*/
+@media (min-width: 992px){
+    .c-grid-container__2{
+        display: grid;
+        column-gap: 12px;
+        grid-template-columns: auto auto;
+    }
+    
+    .c-characteristic{
+        width: 180px;
+    }
 }
 
 /*------------------------------------*\
