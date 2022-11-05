@@ -516,65 +516,91 @@ button{
 }
 
 /*
-    custom toggle weight
+    test toggle
 */
-/**********************************************************/
+.c-option {
+    margin-right: var(--global-whitespace-sm);
+}
 
-.c-custom-toggle-switch{
-    display: flex;
-    align-items: center;
+.c-custom-toggle{
+    /* --toggle-boxShadow: 0 0 0 3px #3385ff4d; */
     --toggle__switch-transition: all var(--global-transitionTiming-alpha);
+    display: absolute;
+    
+    align-items: center;
+    justify-content: center;
 }
 
-/*?????????????????????????????????*/
-.c-custom-toggle--inverted {
-    flex-direction: row-reverse;
-    justify-content: space-between;
-}
-
-.c-custom-toggle-switch__background{
+.c-switch{
+    display: flex;
     position: relative;
+}
+
+.c-choice{
+    display: flex;
+    position: absolute;
+    justify-content: space-around;
+    width: 220px;
+    height: 24px;
+    z-index: 1;
+}
+
+/*  achtergrond switch  */
+.c-custom-toggle__fake-input{
+    position: relative;
+    display: flex;
     width: 220px;
     height: 24px;
     border-radius: 3px;
-    background-color: #a3997e;
+    margin-right: var(--global-whitespace-md);
+    background-color: #6c6651;
+    border: 1px solid var(#3385FF, #E2E3E7);
+    transition: all var(--global-transitionTiming-alpha);
+    box-shadow: var(--toggle-boxShadow, 0);
 }
 
-.c-custom-toggle-switch__slider{
-    position: absolute;
-    display: block;
+/*  de bol  */
+.c-custom-toggle__fake-input::after {
+    display: flex;
+    content: '';
     width: 110px;
     height: 24px;
-    border-radius: 3px;
-    opacity: .5;
+    border-radius: 3px .1px .1px 3px;
+    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, .2);
+    background-color: #a3997e;
+    opacity: .6;
     transition: var(--toggle__switch-transition);
-    background-color: #6c6651;
-    transition: all var(--global-transitionTiming-alpha);
+    z-index: 4;
 }
 
-.c-custom-toggle-switch__background::before{
-    position: absolute;
-    left: 32px;
-    content: "Pound";
-}
 
-.c-custom-toggle-switch__background::after{
-    position: absolute;
+.c-custom-option {
+    fill: #3385FF;
     display: flex;
-    justify-content: flex-end;
-    right: 16px;
-    content: "Kilogram";
+    align-items: center;
 }
 
-.c-custom-toggle-switch__slider:hover{
-    background-color: #6c6651;
-}
-
-.c-custom-toggle-switch__slider:active{
-    background-color: #5b5645;
+.c-custom-option:hover {
+    border-color: #caccd4;
 }
 
 
+.c-option--hidden:focus+.c-custom-option,
+.c-option--hidden:active+.c-custom-option {
+    border-color: #3385FF;
+    box-shadow: 0 0 0 3px #3385ff4d;
+}
+
+.c-option--hidden:checked+.c-custom-option .c-custom-option__symbol {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+.c-option--hidden:checked+.c-custom-toggle .c-custom-toggle__fake-input::after {
+    border-radius: .1px 3px 3px .1px;
+    transform: translate(110px, 0);
+}
 
 /**********************************************************/
 /*
@@ -590,7 +616,7 @@ button{
     border-radius: 50px;
     background-color: var(--color-dark-button);
     border: none;
-    font: 'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .c-random-cat:hover{
