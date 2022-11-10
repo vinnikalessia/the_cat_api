@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./app.js"></script>
-    <link rel="stylesheet" href="https://use.typekit.net/eqb7tez.css" />
+    <script src="./script/app.js"></script>
     <link rel="icon" href="./img/favicon_1.svg" />
 
     <link rel="stylesheet" href="css/screen.css" />
@@ -16,28 +15,21 @@
       <div class="c-cat-data">
         <div class="c-cat-data__title">
           <h1>Cats</h1>
-          <button class="c-random-cat">Random cat</button>
-          <!-- <p>
-                    <input class="o-hide-accessible c-option c-option--hidden" type="checkbox" id="toggle1">
-                    <label class="c-label c-label--option c-custom-toggle" for="toggle1">
-                        <span class="c-custom-toggle__fake-input">
-                        </span>
-                        Toggle setting 1
-                    </label>
-                </p> -->
+          <button class="c-random-cat js-random-cat">Random cat</button>
         </div>
         <!-- alle info van cat -->
-
         <div class="c-cat-data__info c-grid-container__1">
           <div class="c-cat-data__profile c-grid-item__1">
-            <div class="c-profile">Name: Maine Coon</div>
-            <div class="c-profile">Origin: United States</div>
-            <div class="c-profile">Life span: 12 - 15 years</div>
+            <div class="c-profile js-name">Name: Maine Coon</div>
+            <div class="c-profile js-origin">Origin: United States</div>
+            <div class="c-profile js-life_span">Life span: 12 - 15 years</div>
             <div class="c-switch">
               <input class="o-hide-accessible c-option c-option--hidden" type="checkbox" id="toggle1">
               <label class="c-label c-label--option c-custom-toggle" for="toggle1">
                 <span class="c-custom-toggle__fake-input">
                 </span>
+                <div class="js-weight_imperial"></div>
+                <div class="js-weight_metric"></div>
               </label>            
               <div class="c-choice">
                 <p>Pound</p>
@@ -50,32 +42,30 @@
               <div class="c-custom-toggle-switch__slider"></div>
             </div> -->
           </div>
-          <div class="c-cat-data__img c-grid-item__2">
-            <!-- <img src="" alt="foto kat"> -->
-            <p>cat photo</p>
+          <div class="c-grid-item__2 js-img">
           </div>
         </div>
         <div class="c-cat-data__level c-grid-container__2">
           <div class="c-level">
-            <div class="c-characteristic c-grid-item__c">child friendly</div>
+            <div class="c-characteristic c-grid-item__c js-child_friendly"></div>
             <div class="c-level__bar">
               <div class="c-level__bar-2 c-grid-item__l"></div>
             </div>
           </div>
           <div class="c-level">
-            <div class="c-characteristic c-grid-item__c">energy level</div>
+            <div class="c-characteristic c-grid-item__c js-energy_level"></div>
             <div class="c-level__bar">
               <div class="c-level__bar-1 c-grid-item__l"></div>
             </div>
           </div>
           <div class="c-level">
-            <div class="c-characteristic c-grid-item__c">grooming</div>
+            <div class="c-characteristic c-grid-item__c js-grooming"></div>
             <div class="c-level__bar">
               <div class="c-level__bar-2 c-grid-item__l"></div>
             </div>
           </div>
           <div class="c-level">
-            <div class="c-characteristic c-grid-item__c">intelligence</div>
+            <div class="c-characteristic c-grid-item__c js-intelligence"></div>
             <div class="c-level__bar">
               <div class="c-level__bar-4 c-grid-item__l"></div>
             </div>

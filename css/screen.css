@@ -485,17 +485,13 @@ button{
     display: flex;
 }
 
-/*bij 360px => fs 14px*/
 .c-cat-data__profile{
     font-size: 14px;
 }
 
-/*  360 */
 .c-cat-data__img{
-    padding: 8px;
-    max-width: 100%;
-    height: auto;
-    display: block;
+    max-height: 200px;
+    object-fit: scale-down;
 }
 
 .c-cat-data__level{
