@@ -19,11 +19,8 @@ const getRandomBreed = (breedsDict) => {
     // randomId is cijfer id van id dat als tekst is
 
     const randomBreed = breedsDict[randomId];
-    // console.log(randomBreed); // dit is id van een breed
 
     // ik krijg random kat-id, nu kat zoek met dat id
-    // getCatById(randomBreed);
-    // return randomBreed;
     return randomId;
 }
 
@@ -78,7 +75,15 @@ document.addEventListener('DOMContentLoaded', async function() {
     const breeds = await getData(endpoint);
 
     // test
-    console.log(breeds[1]);
+    const randomCatButton = document.querySelector('.js-random-cat');
+
+    randomCatButton.addEventListener('click', function() {
+        console.info("random button clicked");
+        
+        const randomCat = getRandomBreed(dictId);
+        getCatById(randomCat, breeds);
+    })
+
 
     // id's van alle rassen in een dict zetten
     const dictId = getDictId(breeds);
