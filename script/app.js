@@ -26,17 +26,32 @@ const getRandomBreed = (breedsDict) => {
 
 const getCatById = (idCijfer, DictBreeds) => {
     const id = idCijfer - 1;
+    const weight = document.querySelector('.js-weight');
+    const weightButton = document.querySelector('.js-weight-button');
 
     // data bij juiste js zetten
     document.querySelector('.js-name').innerText = "Name: " + DictBreeds[id].name;
     document.querySelector('.js-origin').innerText = "Origin: " + DictBreeds[id].origin;
-    document.querySelector('.js-life_span').innerText = "Life-span: " + DictBreeds[id].life_span;
-    
-    // document.querySelector('.js-img').innerHTML = `<img src="${DictBreeds[id].image.url}" alt="cat">`;
+    document.querySelector('.js-life_span').innerText = "Life-span: " + DictBreeds[id].life_span + " years";
+
+    // image
     document.querySelector('.js-img').innerHTML = `<img class="c-cat-data__img" src="${DictBreeds[id].image.url}" alt="cat">`;
     
+    // weight
     document.querySelector('.js-weight_imperial').innerText = DictBreeds[id].weight.imperial + " pounds";
     document.querySelector('.js-weight_metric').innerText = DictBreeds[id].weight.metric + " kilogram";
+    
+    /////////////////////////////////////////////////////////////////////////////////////
+    
+    // weightButton.addEventListener('click', () => {
+    //     console.info("weight button clicked!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+    // });
+
+    // document.querySelector('.js-weight_imperial').innerText = DictBreeds[id].weight.imperial + " pounds";
+    // document.querySelector('.js-weight_metric').innerText = DictBreeds[id].weight.metric + " kilogram";
+
+    /////////////////////////////////////////////////////////////////////////////////////
+
 
     // css aanpassen adhv deze data
     document.querySelector('.js-child_friendly').innerText = "Child-friendly:";

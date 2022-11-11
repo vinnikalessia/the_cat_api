@@ -535,6 +535,11 @@ button{
     z-index: 1;
 }
 
+.c-weight{
+    display: flex;
+    background-color: #3385FF;
+}
+
 /*  achtergrond switch  */
 .c-custom-toggle__fake-input{
     position: relative;
@@ -563,7 +568,6 @@ button{
     z-index: 4;
 }
 
-
 .c-custom-option {
     fill: #3385FF;
     display: flex;
@@ -573,7 +577,6 @@ button{
 .c-custom-option:hover {
     border-color: #caccd4;
 }
-
 
 .c-option--hidden:focus+.c-custom-option,
 .c-option--hidden:active+.c-custom-option {
@@ -586,12 +589,10 @@ button{
     transform: scale(1);
 }
 
-
 .c-option--hidden:checked+.c-custom-toggle .c-custom-toggle__fake-input::after {
     border-radius: .0063rem .1875rem .1875rem .0063rem;
     transform: translate(6.875rem, 0);
 }
-
 /**********************************************************/
 /*
     hidden checkbox
@@ -629,6 +630,7 @@ button{
 .c-level{
     display: flex;
     align-items: center;
+    width: 20rem;
 }
 
 /*  360 */
@@ -728,6 +730,12 @@ button{
     @media
 */
 @media (min-width: 576px){
+
+    .c-level{
+        display: flex;
+        align-items: center;
+        width: 0rem;
+    }
     .c-cat-data__profile{
         font-size: 1rem;
     }
@@ -750,11 +758,11 @@ button{
         justify-content: center;
         grid-template-columns: auto auto;
     }
-
+    
     .c-grid-item__1{
         grid-column-start: 1;
         grid-column-end: 1;
-    
+        
         grid-row-start: 1;
         grid-row-end: 1;
     }
@@ -762,7 +770,7 @@ button{
     .c-grid-item__2{
         grid-column-start: 2;
         grid-column-end: 2;
-    
+        
         grid-row-start: 1;
         grid-row-end: 1;
     }
