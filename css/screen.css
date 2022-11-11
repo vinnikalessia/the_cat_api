@@ -518,7 +518,6 @@ button{
 .c-custom-toggle{
     --toggle__switch-transition: all var(--global-transitionTiming-alpha);
     display: absolute;
-    
     align-items: center;
     justify-content: center;
 }
@@ -551,7 +550,7 @@ button{
     box-shadow: var(--toggle-boxShadow, 0);
 }
 
-/*  de bol  */
+/*  "de bol"  */
 .c-custom-toggle__fake-input::after {
     display: flex;
     content: '';
