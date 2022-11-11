@@ -27,20 +27,6 @@ const getRandomBreed = (breedsDict) => {
 const getCatById = (idCijfer, DictBreeds) => {
     const id = idCijfer - 1;
 
-    // testen of alles werkt en ik alle data kan ophalen
-    console.info(DictBreeds[id].id + "😆😆😆😆😆"); // naam id van random kat
-    console.info(DictBreeds[id].name); // naam van random kat
-    console.info(DictBreeds[id].origin); // origin van random kat
-    console.info(DictBreeds[id].life_span + " years"); // life span van random kat
-
-    console.info(DictBreeds[id].weight.imperial + " pounds"); // weight pounds van random kat
-    console.info(DictBreeds[id].weight.metric + " kilogram"); // weight kilogram van random kat
-
-    console.info(DictBreeds[id].child_friendly); // child friendly van random kat
-    console.info(DictBreeds[id].energy_level); // energy level van random kat
-    console.info(DictBreeds[id].grooming); // grooming van random kat
-    console.info(DictBreeds[id].intelligence); // intelligentie van random kat
-
     // data bij juiste js zetten
     document.querySelector('.js-name').innerText = "Name: " + DictBreeds[id].name;
     document.querySelector('.js-origin').innerText = "Origin: " + DictBreeds[id].origin;
@@ -53,11 +39,31 @@ const getCatById = (idCijfer, DictBreeds) => {
     document.querySelector('.js-weight_metric').innerText = DictBreeds[id].weight.metric + " kilogram";
 
     // css aanpassen adhv deze data
-    document.querySelector('.js-child_friendly').innerText = "Child-friendly: " + DictBreeds[id].child_friendly;
-    document.querySelector('.js-energy_level').innerText = "Energy-level: " + DictBreeds[id].energy_level;
-    document.querySelector('.js-grooming').innerText = "Grooming: " + DictBreeds[id].grooming;
-    document.querySelector('.js-intelligence').innerText = "Intelligence: " + DictBreeds[id].intelligence;
+    document.querySelector('.js-child_friendly').innerText = "Child-friendly:";
+    document.querySelector('.js-energy_level').innerText = "Energy-level:";
+    document.querySelector('.js-grooming').innerText = "Grooming:";
+    document.querySelector('.js-intelligence').innerText = "Intelligence:";
+
+    getLevel(DictBreeds[id].child_friendly, DictBreeds[id].energy_level, DictBreeds[id].grooming, DictBreeds[id].intelligence);
 }
+
+const getLevel = (cl, el, gr, il) => {
+    const cfLevel = document.querySelector('.js-cf-level');
+    const elLevel = document.querySelector('.js-el-level');
+    const grLevel = document.querySelector('.js-gr-level');
+    const ilLevel = document.querySelector('.js-il-level');
+
+    cfLevel.classList.remove('c-level__bar-1', 'c-level__bar-2', 'c-level__bar-3', 'c-level__bar-4', 'c-level__bar-5');
+    elLevel.classList.remove('c-level__bar-1', 'c-level__bar-2', 'c-level__bar-3', 'c-level__bar-4', 'c-level__bar-5');
+    grLevel.classList.remove('c-level__bar-1', 'c-level__bar-2', 'c-level__bar-3', 'c-level__bar-4', 'c-level__bar-5');
+    ilLevel.classList.remove('c-level__bar-1', 'c-level__bar-2', 'c-level__bar-3', 'c-level__bar-4', 'c-level__bar-5');
+    
+    cfLevel.classList.add(`c-level__bar-${cl}`);
+    elLevel.classList.add(`c-level__bar-${el}`);
+    grLevel.classList.add(`c-level__bar-${gr}`);
+    ilLevel.classList.add(`c-level__bar-${il}`);
+}
+
 
 const getData = (endpoint) => {
     return fetch(endpoint)
@@ -84,7 +90,6 @@ document.addEventListener('DOMContentLoaded', async function() {
         getCatById(randomCat, breeds);
     })
 
-
     // id's van alle rassen in een dict zetten
     const dictId = getDictId(breeds);
 
@@ -93,4 +98,6 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     // random kat ophalen
     getCatById(randomCat, breeds);
+
+
 })
