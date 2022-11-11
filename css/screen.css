@@ -13,11 +13,11 @@
     --color-dark-button: #B7AD91;
     --color-light-button: #D8D8D8;
 
-    --color-level-1: #F9A990;
-    --color-level-2: #F9C890;
-    --color-level-3: #F9DD90;
-    --color-level-4: #F9E890;
-    --color-level-5: #D6F990;
+    --color-level-1: #FF906F;
+    --color-level-2: #FFB67E;
+    --color-level-3: #F8EE7F;
+    --color-level-4: #ABEB58;
+    --color-level-5: #65DC5F;
 
     --color-text: #000000;
 
@@ -27,7 +27,6 @@
     --global-baseline: .5rem;
     --global-whitespace: calc(var(--global-baseline) * 3);
     /* = 24px */
-
     --global-whitespace-xs: calc(var(--global-baseline) / 2);
     /* = 4px */
     --global-whitespace-sm: calc(var(--global-baseline) * 1);
