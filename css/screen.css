@@ -630,7 +630,7 @@ button{
 .c-level{
     display: flex;
     align-items: center;
-    width: 20rem;
+    /* width: 20rem; */
 }
 
 /*  360 */
@@ -731,11 +731,11 @@ button{
 */
 @media (min-width: 576px){
 
-    .c-level{
+    /* .c-level{
         display: flex;
         align-items: center;
         width: 0rem;
-    }
+    } */
     .c-cat-data__profile{
         font-size: 1rem;
     }
