@@ -489,8 +489,12 @@ button{
 }
 
 .c-cat-data__img{
-    max-height: 12.5rem;
-    object-fit: scale-down;
+    /* max-height: 12.5rem;
+    object-fit: scale-down; */
+    object-fit: cover;
+    object-position: center;
+    height: 250px;
+    width: 250px;
 }
 
 .c-cat-data__level{
@@ -498,7 +502,9 @@ button{
 }
 
 .c-profile{
-    padding: .5rem .5rem .5rem 0rem;
+    /* padding: .5rem .5rem .5rem 0rem; */
+    width: 280px;
+    padding: .5rem .5rem .5rem .5rem;
 }
 
 .c-characteristic{
@@ -630,6 +636,7 @@ button{
 .c-level{
     display: flex;
     align-items: center;
+    gap: 5rem;
     /* width: 20rem; */
 }
 
@@ -682,18 +689,14 @@ button{
 .c-grid-container__1{
     margin: 1.5rem 0rem;
     display: grid;
-    column-gap: .75rem;
     grid-template-columns: auto;
     justify-content: center;
 }
 
 
 .c-grid-item__1{
-    grid-column-start: 1;
-    grid-column-end: 1;
-
-    grid-row-start: 2;
-    grid-row-end: 2;
+    grid-column: 1;
+    grid-row: 1;
 }
 
 .c-grid-item__2{
@@ -701,11 +704,8 @@ button{
     justify-content: center;
     align-items: center;
 
-    grid-column-start: 1;
-    grid-column-end: 1;
-
-    grid-row-start: 1;
-    grid-row-end: 1;
+    grid-column: 2;
+    grid-row: 1;
 }
 
 .c-grid-container__2{
@@ -828,18 +828,25 @@ button{
 
     .c-grid-container__2{
         display: grid;
-        column-gap: .75rem;
+        column-gap: 0rem;
         grid-template-columns: auto auto;
     }
 
     .c-grid-container__1{
         justify-content: center;
-        column-gap: 25rem;
+        column-gap: 17rem;
         grid-template-columns: auto auto;
     }
     
     .c-characteristic{
         width: 11.25rem;
+    }
+
+    .c-cat-data__img{
+        object-fit: cover;
+        object-position: center;
+        height: 300px;
+        width: 300px;
     }
 }
 
