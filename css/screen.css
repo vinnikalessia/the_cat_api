@@ -514,7 +514,7 @@ button{
 /*
     toggle switch 2
 */
-.switch-button {
+.c-switch-button {
     background: #a3997e8f;
     border-radius: 30px;
     overflow: hidden;
@@ -528,7 +528,7 @@ button{
     position: relative;
 }
 
-.switch-button:before{
+.c-switch-button:before{
     content: "Kilogram";
     position: absolute;
     top: 0;
@@ -542,7 +542,7 @@ button{
     pointer-events: none;
 }
 
-.switch-button-checkbox{
+.c-switch-button-checkbox{
     cursor: pointer;
     position: absolute;
     top: 0;
@@ -554,12 +554,12 @@ button{
     z-index: 2;
 }
 
-.switch-button-checkbox:checked + .switch-button-label:before{
+.c-switch-button-checkbox:checked + .c-switch-button-label:before{
     transform: translateX(120px);
     transition: transform 300ms linear;
 }
 
-.switch-button-checkbox + .switch-button-label{
+.c-switch-button-checkbox + .c-switch-button-label{
     position: relative;
     padding: 15px 0;
     display: block;
@@ -567,7 +567,7 @@ button{
     pointer-events: none;
 }
 
-.switch-button-checkbox + .switch-button-label:before{
+.c-switch-button-checkbox + .c-switch-button-label:before{
     content: "";
     background: #fff;
     height: 30px;
@@ -580,7 +580,7 @@ button{
     transition: transform 300ms;
 }
 
-.switch-button-label-span {
+.c-switch-button-label-span {
     position: relative;
     top: -12px;
 }
