@@ -62,18 +62,26 @@ const getCatById = (idCijfer, DictBreeds) => {
     getLevel(DictBreeds[id].child_friendly, DictBreeds[id].energy_level, DictBreeds[id].grooming, DictBreeds[id].intelligence);
 }
 
-const getLevel = (cl, el, gr, il) => {
+const getLevel = (cf, el, gr, il) => {
     const cfLevel = document.querySelector('.js-cf-level');
     const elLevel = document.querySelector('.js-el-level');
     const grLevel = document.querySelector('.js-gr-level');
     const ilLevel = document.querySelector('.js-il-level');
 
+    /*hover waardes*/
+    document.querySelector('.js-cf-waarde').innerHTML = `<p>${cf}</p>`;
+    document.querySelector('.js-el-waarde').innerHTML = `<p>${el}</p>`;
+    document.querySelector('.js-gr-waarde').innerHTML = `<p>${gr}</p>`;
+    document.querySelector('.js-il-waarde').innerHTML = `<p>${il}</p>`;
+    
+    /*vorige level waardes opruimen*/
     cfLevel.classList.remove('c-level__bar-1', 'c-level__bar-2', 'c-level__bar-3', 'c-level__bar-4', 'c-level__bar-5');
     elLevel.classList.remove('c-level__bar-1', 'c-level__bar-2', 'c-level__bar-3', 'c-level__bar-4', 'c-level__bar-5');
     grLevel.classList.remove('c-level__bar-1', 'c-level__bar-2', 'c-level__bar-3', 'c-level__bar-4', 'c-level__bar-5');
     ilLevel.classList.remove('c-level__bar-1', 'c-level__bar-2', 'c-level__bar-3', 'c-level__bar-4', 'c-level__bar-5');
     
-    cfLevel.classList.add(`c-level__bar-${cl}`);
+    /*de juiste bar tonen*/
+    cfLevel.classList.add(`c-level__bar-${cf}`);
     elLevel.classList.add(`c-level__bar-${el}`);
     grLevel.classList.add(`c-level__bar-${gr}`);
     ilLevel.classList.add(`c-level__bar-${il}`);
