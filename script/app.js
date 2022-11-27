@@ -43,12 +43,13 @@ const getCatById = (idCijfer, DictBreeds) => {
     
     /////////////////////////////////////////////////////////////////////////////////////
     
-    // weightButton.addEventListener('click', () => {
-    //     console.info("weight button clicked!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-    // });
+    weightButton.addEventListener('click', () => {
+        console.info("weight button clicked!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        
+    });
 
-    // document.querySelector('.js-weight_imperial').innerText = DictBreeds[id].weight.imperial + " pounds";
-    // document.querySelector('.js-weight_metric').innerText = DictBreeds[id].weight.metric + " kilogram";
+    document.querySelector('.js-weight_imperial').innerText = DictBreeds[id].weight.imperial + " pounds";
+    document.querySelector('.js-weight_metric').innerText = DictBreeds[id].weight.metric + " kilogram";
 
     /////////////////////////////////////////////////////////////////////////////////////
 

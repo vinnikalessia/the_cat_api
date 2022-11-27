@@ -512,91 +512,79 @@ button{
 }
 
 /*
-    test toggle
+    toggle switch 2
 */
-.c-option {
-    margin-right: var(--global-whitespace-sm);
+.switch-button {
+    /* background: rgba(255, 255, 255, 0.56); */
+    background: #a3997e8f;
+    border-radius: 30px;
+    overflow: hidden;
+    width: 240px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    position: relative;
+    padding-right: 120px;
+    position: relative;
 }
 
-.c-custom-toggle{
-    --toggle__switch-transition: all var(--global-transitionTiming-alpha);
-    display: absolute;
+.switch-button:before{
+    content: "Kilogram";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 120px;
+    display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 3;
+    pointer-events: none;
 }
 
-.c-switch{
-    display: flex;
-    position: relative;
-}
-
-.c-choice{
-    display: flex;
+.switch-button-checkbox{
+    cursor: pointer;
     position: absolute;
-    justify-content: space-around;
-    width: 13.75rem;
-    height: 1.5rem;
-    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 2;
 }
 
-.c-weight{
-    display: flex;
-    background-color: #3385FF;
+.switch-button-checkbox:checked + .switch-button-label:before{
+    transform: translateX(120px);
+    transition: transform 300ms linear;
 }
 
-/*  achtergrond switch  */
-.c-custom-toggle__fake-input{
+.switch-button-checkbox + .switch-button-label{
     position: relative;
-    display: flex;
-    width: 13.75rem;
-    height: 1.5rem;
-    border-radius: .1875rem;
-    margin-right: var(--global-whitespace-md);
-    background-color: #6c6651;
-    border: .0625rem solid var(#3385FF, #E2E3E7);
-    transition: all var(--global-transitionTiming-alpha);
-    box-shadow: var(--toggle-boxShadow, 0);
+    padding: 15px 0;
+    display: block;
+    user-select: none;
+    pointer-events: none;
 }
 
-/*  "de bol"  */
-.c-custom-toggle__fake-input::after {
-    display: flex;
-    content: '';
-    width: 6.875rem;
-    height: 1.5rem;
-    border-radius: .1875rem .0063rem .0063rem .1875rem;
-    box-shadow: 0 .0625rem .1875rem .0625rem rgba(0, 0, 0, .2);
-    background-color: #a3997e;
-    opacity: .6;
-    transition: var(--toggle__switch-transition);
-    z-index: 4;
+.switch-button-checkbox + .switch-button-label:before{
+    content: "";
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 30px;
+    transform: translateX(0);
+    transition: transform 300ms;
 }
 
-.c-custom-option {
-    fill: #3385FF;
-    display: flex;
-    align-items: center;
+.switch-button-label-span {
+    position: relative;
 }
 
-.c-custom-option:hover {
-    border-color: #caccd4;
-}
 
-.c-option--hidden:focus+.c-custom-option,
-.c-option--hidden:active+.c-custom-option {
-    border-color: #3385FF;
-    box-shadow: 0 0 0 0.1875rem #3385ff4d;
-}
-
-.c-option--hidden:checked+.c-custom-option .c-custom-option__symbol {
-    opacity: 1;
-    transform: scale(1);
-}
-
-.c-option--hidden:checked+.c-custom-toggle .c-custom-toggle__fake-input::after {
-    border-radius: .0063rem .1875rem .1875rem .0063rem;
-    transform: translate(6.875rem, 0);
-}
 /**********************************************************/
 /*
     hidden checkbox
@@ -699,13 +687,11 @@ button{
     display: block;
 }
 
-
 .c-level__bar-1:focus-visible{
     display: block;
     border: 4px solid #7f775f;
     outline: none;
 }
-
 
 /*
     css grid
