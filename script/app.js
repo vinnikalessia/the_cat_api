@@ -28,6 +28,8 @@ const getCatById = (idCijfer, DictBreeds) => {
     const id = idCijfer - 1;
     const weight = document.querySelector('.js-weight');
     const weightButton = document.querySelector('.js-weight-button');
+    const checkbox = document.querySelector('.js-checkbox');
+    const weight_value = document.querySelector('.js-weight-value');
 
     // data bij juiste js zetten
     document.querySelector('.js-name').innerText = "Name: " + DictBreeds[id].name;
@@ -38,18 +40,25 @@ const getCatById = (idCijfer, DictBreeds) => {
     document.querySelector('.js-img').innerHTML = `<img class="c-cat-data__img" src="${DictBreeds[id].image.url}" alt="cat">`;
     
     // weight
-    document.querySelector('.js-weight_imperial').innerText = DictBreeds[id].weight.imperial + " pounds";
-    document.querySelector('.js-weight_metric').innerText = DictBreeds[id].weight.metric + " kilogram";
+    document.querySelector('.js-weight').innerHTML = `<div>${DictBreeds[id].weight.imperial} pounds</div>`;
     
     /////////////////////////////////////////////////////////////////////////////////////
     
     weightButton.addEventListener('click', () => {
         console.info("weight button clicked!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-        
+        if(checkbox.checked) {
+            console.info("checked => kilogram");
+            document.querySelector('.js-weight').innerHTML = `<div>${DictBreeds[id].weight.metric} kilogram</div>`;
+            
+        }
+        else {
+            console.info("not checked => pound");
+            document.querySelector('.js-weight').innerHTML = `<div>${DictBreeds[id].weight.imperial} pounds</div>`;
+        }
     });
-
-    document.querySelector('.js-weight_imperial').innerText = DictBreeds[id].weight.imperial + " pounds";
-    document.querySelector('.js-weight_metric').innerText = DictBreeds[id].weight.metric + " kilogram";
+    
+    // document.querySelector('.js-weight_metric').innerText = DictBreeds[id].weight.metric + " kilogram";
+    // document.querySelector('.js-weight_imperial').innerText = DictBreeds[id].weight.imperial + " pounds";
 
     /////////////////////////////////////////////////////////////////////////////////////
 
