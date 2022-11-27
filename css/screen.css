@@ -515,11 +515,11 @@ button{
     toggle switch 2
 */
 .switch-button {
-    /* background: rgba(255, 255, 255, 0.56); */
     background: #a3997e8f;
     border-radius: 30px;
     overflow: hidden;
     width: 240px;
+    height: 30px;
     text-align: center;
     font-size: 18px;
     letter-spacing: 1px;
@@ -570,8 +570,8 @@ button{
 .switch-button-checkbox + .switch-button-label:before{
     content: "";
     background: #fff;
-    height: 100%;
-    width: 100%;
+    height: 30px;
+    width: 120px;
     position: absolute;
     left: 0;
     top: 0;
@@ -582,6 +582,7 @@ button{
 
 .switch-button-label-span {
     position: relative;
+    top: -12px;
 }
 
 
