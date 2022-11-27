@@ -500,7 +500,6 @@ button{
 }
 
 .c-profile{
-    /* padding: .5rem .5rem .5rem 0rem; */
     width: 280px;
     padding: .5rem .5rem .5rem .5rem;
 }
@@ -509,6 +508,10 @@ button{
     font-size: .875rem;
     padding: .5rem;
     width: 9.375rem;
+}
+
+.c-cat-data__weight{
+    padding-left: 10px;
 }
 
 /*

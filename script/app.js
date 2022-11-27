@@ -40,7 +40,7 @@ const getCatById = (idCijfer, DictBreeds) => {
     document.querySelector('.js-img').innerHTML = `<img class="c-cat-data__img" src="${DictBreeds[id].image.url}" alt="cat">`;
     
     // weight
-    document.querySelector('.js-weight').innerHTML = `<div>${DictBreeds[id].weight.imperial} pounds</div>`;
+    document.querySelector('.js-weight').innerHTML = `<div class="c-cat-data__weight">${DictBreeds[id].weight.imperial} pounds</div>`;
     
     /////////////////////////////////////////////////////////////////////////////////////
     
@@ -48,12 +48,12 @@ const getCatById = (idCijfer, DictBreeds) => {
         console.info("weight button clicked!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
         if(checkbox.checked) {
             console.info("checked => kilogram");
-            document.querySelector('.js-weight').innerHTML = `<div>${DictBreeds[id].weight.metric} kilogram</div>`;
+            document.querySelector('.js-weight').innerHTML = `<div class="c-cat-data__weight">${DictBreeds[id].weight.metric} kilogram</div>`;
             
         }
         else {
             console.info("not checked => pound");
-            document.querySelector('.js-weight').innerHTML = `<div>${DictBreeds[id].weight.imperial} pounds</div>`;
+            document.querySelector('.js-weight').innerHTML = `<div class="c-cat-data__weight">${DictBreeds[id].weight.imperial} pounds</div>`;
         }
     });
     
