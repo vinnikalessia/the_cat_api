@@ -706,15 +706,6 @@ button{
     outline: none;
 }
 
-.c-level__bar-1:focus-visible + .c-text,
-.c-level__bar-2:focus-visible + .c-text,
-.c-level__bar-3:focus-visible + .c-text,
-.c-level__bar-4:focus-visible + .c-text,
-.c-level__bar-5:focus-visible + .c-text{
-    display: block;
-    /* border: 4px solid #7f775f;
-    outline: none; */
-}
 
 /*
     css grid
