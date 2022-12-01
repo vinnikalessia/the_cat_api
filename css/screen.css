@@ -54,7 +54,7 @@
 
 html {
     line-height: 1.5;
-    font-size: 1rem;
+    font-size: 16px;
     font-family: 'Courier New', Courier, monospace;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
@@ -251,7 +251,6 @@ button{
     margin-left: auto;
     margin-right: auto;
     max-width: 79.5em;
-    /* 79.5 * 16px = 1272 */
     width: 100%;
 }
 
@@ -484,15 +483,11 @@ button{
     display: flex;
 }
 
-.c-cat-data__profile{
-    font-size: .875rem;
-}
-
 .c-cat-data__img{
     object-fit: cover;
     object-position: center;
-    height: 250px;
-    width: 250px;
+    height: 15.625rem;
+    width: 15.625rem;
 }
 
 .c-cat-data__level{
@@ -500,14 +495,8 @@ button{
 }
 
 .c-profile{
-    width: 280px;
+    width: 17.5rem;
     padding: .5rem .5rem .5rem .5rem;
-}
-
-.c-characteristic{
-    font-size: .875rem;
-    padding: .5rem;
-    width: 9.375rem;
 }
 
 .c-cat-data__weight{
@@ -604,7 +593,7 @@ button{
     background-color: var(--color-dark-button);
     border: none;
     font-family: 'Courier New', Courier, monospace;
-    font-size: .875rem;
+    font-size: 1.125rem;
 }
 
 .c-random-cat:hover{
@@ -627,7 +616,6 @@ button{
     display: flex;
     align-items: center;
     gap: 5rem;
-    /* width: 20rem; */
 }
 
 /*  360 */
@@ -680,7 +668,7 @@ button{
     grid-column: 2/4;
     grid-row: 4;
     justify-self: center;
-    font-size: 34px;
+    font-size: 2.125rem;
 }
 
 .c-grid-item__4:hover + .c-text,
@@ -774,20 +762,6 @@ button{
     @media
 */
 @media (min-width: 576px){
-
-    .c-cat-data__profile{
-        font-size: 1rem;
-    }
-
-    .c-characteristic{
-        font-size: 1rem;
-        width: 12.5rem;
-    }
-
-    .c-random-cat{
-        font-size: 1rem;
-    }
-
     .c-level__bar{
         width: 15.625rem;
         height: 1.5rem;
@@ -831,36 +805,10 @@ button{
 }
 
 @media (min-width: 992px){
-    .c-cat-data__profile{
-        font-size: 1.125rem;
-    }
 
-    .c-characteristic{
-        font-size: 1.125rem;
-    }
-
-    /* .c-grid-container__2{
-        display: grid;
-        column-gap: 0rem;
-        grid-template-columns: auto auto;
-    }
-
-    .c-grid-container__1{
-        justify-content: center;
-        column-gap: 17rem;
-        grid-template-columns: auto auto;
-    } */
-    
     .c-characteristic{
         width: 11.25rem;
     }
-
-    /* .c-cat-data__img{
-        object-fit: cover;
-        object-position: center;
-        height: 300px;
-        width: 300px;
-    } */
 }
 
 /*------------------------------------*\
