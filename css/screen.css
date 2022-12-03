@@ -625,35 +625,35 @@ button{
 }
 
 .c-level__bar-1{
-    width: 1.25rem;
+    width: 2.5rem;
     height: 1.25rem;
     background-color: var(--color-level-1);
     content: "";
 }
 
 .c-level__bar-2{
-    width: 2.5rem;
+    width: 5rem;
     height: 1.25rem;
     background-color: var(--color-level-2);
     content: "";
 }
 
 .c-level__bar-3{
-    width: 3.75rem;
+    width: 7.5rem;
     height: 1.25rem;
     background-color: var(--color-level-3);
     content: "";
 }
 
 .c-level__bar-4{
-    width: 5rem;
+    width: 160px;
     height: 1.25rem;
     background-color: var(--color-level-4);
     content: "";
 }
 
 .c-level__bar-5{
-    width: 6.25rem;
+    width: 12.5rem;
     height: 1.25rem;
     background-color: var(--color-level-5);
     content: "";
@@ -843,6 +843,14 @@ button{
         height: 1.5rem;
         background-color: var(--color-level-5);
         content: "";
+    }
+
+    .c-text{
+        display: none;
+        grid-column: 1/5;
+        grid-row: 4;
+        justify-self: center;
+        font-size: 2.125rem;
     }
     
     .c-grid-container{
