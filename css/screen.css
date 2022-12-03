@@ -472,6 +472,7 @@ button{
     cat data
 */
 .c-cat-data{
+    /* display: block; */
     display: block;
     justify-content: center;
     align-items: center;
@@ -757,10 +758,45 @@ button{
     grid-row: 6;
 }
 
+/*
+    loading
+*/
+.c-loading{
+    position: fixed;
+    top: 20%;
+    left: 47%;
+}
+
+.lds-dual-ring {
+    width: 80px;
+    height: 80px;
+}
+
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: var(--color-dark-button) transparent var(--color-dark-button) transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 /*
     @media
 */
+
 @media (min-width: 576px){
     .c-cat-data__img{
         height: 15.625rem;
@@ -807,6 +843,15 @@ button{
     .c-level__bar-5{
         width: 15.625rem;
         height: 1.5rem;
+    }
+
+    .c-grid-container{
+        margin: 2.5rem 0rem;
+        display: grid;
+        grid-template-columns: .5fr .5fr .5fr .5fr;
+        grid-template-rows: 1fr .1fr .1fr .1fr .1fr .3fr;
+        row-gap: 1.5rem;
+        column-gap: 1.5rem;
     }
     
     .c-grid-item__1{
