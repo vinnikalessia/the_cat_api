@@ -890,8 +890,6 @@ button{
         grid-template-rows: 1fr .3fr .3fr;
     }
 
-
-
     .c-grid-item__2{
         grid-column: span 2;
     }
