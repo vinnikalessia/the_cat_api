@@ -701,7 +701,7 @@ button{
 .c-grid-item__1{
     display: flex;
     justify-content: center;
-    
+
     grid-column: span 4;
     grid-row: 2;
 }
@@ -801,6 +801,12 @@ button{
 /*
     @media
 */
+@media(max-width: 576px) {
+    html {
+        font-size: 0.8rem;
+    }
+}
+
 
 @media (min-width: 576px){
     .c-cat-data__img{
