@@ -699,6 +699,9 @@ button{
 }
 
 .c-grid-item__1{
+    display: flex;
+    justify-content: center;
+    
     grid-column: span 4;
     grid-row: 2;
 }
@@ -857,6 +860,9 @@ button{
     }
     
     .c-grid-item__1{
+        display: flex;
+        justify-content: center;
+
         grid-column: span 2;
         grid-row: 1;
     }
