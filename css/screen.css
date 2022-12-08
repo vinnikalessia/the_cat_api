@@ -772,12 +772,12 @@ button{
     left: 47%;
 }
 
-.lds-dual-ring{
+.lc-loading-ring{
     width: 80px;
     height: 80px;
 }
 
-.lds-dual-ring:after{
+.c-loading-ring:after{
     content: " ";
     display: block;
     width: 64px;
@@ -786,10 +786,10 @@ button{
     border-radius: 50%;
     border: 6px solid #fff;
     border-color: var(--color-dark-button) transparent var(--color-dark-button) transparent;
-    animation: lds-dual-ring 1.2s linear infinite;
+    animation: c-loading-ring 1.2s linear infinite;
 }
 
-@keyframes lds-dual-ring {
+@keyframes c-loading-ring {
     0% {
         transform: rotate(0deg);
     }
