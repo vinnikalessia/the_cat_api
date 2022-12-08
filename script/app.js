@@ -1,9 +1,3 @@
-// live_Hg2ermC9eGWh1KaZGfDE3hg191cnT6d9YfitnJKQRO18gpFShChaqADfjZ6ANKJc
-
-
-
-
-
 
 const getDictId = (breeds) => {
     const dictId = {}; // dict van alle id's die een cijfer id hebben gekregen voor randomizer
@@ -45,7 +39,6 @@ const getCatById = (idCijfer, DictBreeds) => {
     /////////////////////////////////////////////////////////////////////////////////////
     
     weightButton.addEventListener('click', () => {
-        console.info("weight button clicked!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
         if(checkbox.checked) {
             console.info("checked => kilogram");
             document.querySelector('.js-weight').innerHTML = `<div class="c-cat-data__weight">${DictBreeds[id].weight.metric} kilogram</div>`;
@@ -56,9 +49,6 @@ const getCatById = (idCijfer, DictBreeds) => {
             document.querySelector('.js-weight').innerHTML = `<div class="c-cat-data__weight">${DictBreeds[id].weight.imperial} pounds</div>`;
         }
     });
-    
-    // document.querySelector('.js-weight_metric').innerText = DictBreeds[id].weight.metric + " kilogram";
-    // document.querySelector('.js-weight_imperial').innerText = DictBreeds[id].weight.imperial + " pounds";
 
     /////////////////////////////////////////////////////////////////////////////////////
 
