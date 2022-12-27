@@ -31,7 +31,8 @@ const getCatById = (idCijfer, DictBreeds) => {
     document.querySelector('.js-life_span').innerText = "Life-span: " + DictBreeds[id].life_span + " years";
 
     // image
-    document.querySelector('.js-img').innerHTML = `<img class="c-cat-data__img" src="${DictBreeds[id].image.url}" alt="${DictBreeds[id].name}">`;
+    // document.querySelector('.js-img').innerHTML = `<img class="c-cat-data__img" src="${DictBreeds[id].image.url}" alt="${DictBreeds[id].name}">`;
+    document.querySelector('.js-img').innerHTML = `<img class="c-cat-data__img" src="/img/cat.jpg" alt="a photo of a cat">`;
     
     // weight
     document.querySelector('.js-weight').innerHTML = `<div class="c-cat-data__weight">${DictBreeds[id].weight.imperial} pounds</div>`;
